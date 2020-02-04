@@ -1,0 +1,28 @@
+{
+  "name": "napoleon",
+  "version": "0.0.1",
+  "description": "Small YouTube downloader built with electron and youtube-dl. Still in development.",
+  "main": "index.js",
+  "author": "",
+  "dependencies": {
+    "youtube-dl": "^3.0.2"
+  },
+  "devDependencies": {
+    "electron": "^8.0.0",
+    "electron-builder": "^22.3.2"
+  },
+  "build": {
+    "appId": "napoleon.mattmoony.github.io",
+    "mac": {
+      "category": "napoleon.mattmoony.github.io.category.downloader"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
