@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Napoleon</title>
+    <base href="./" />
+
+    <script src="https://kit.fontawesome.com/eeafe44cad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./style/index.css" />
+</head>
+<body>
+    <nav>
+        <i id="close-window" class="fas fa-times"></i>
+    </nav>
+    <header>
+        <h1>~ Napoleon ~</h1>
+    </header>
+    <main>
+        <div class="in-container">
+            <progress id="hide-in" max="100" value="50"></progress>
+            <label id="down-perc" for="hide-in">50%</label>
+            <input id="url-in" placeholder="https://youtu.be/..." />
+            <button id="lets-go" disabled>Download</button>
+        </div>
+        <div id="vid-container">
+            <div class="vid-thumb-container">
+                <img id="vid-thumb" src="https://media.wired.com/photos/5e1e646743940d0008009167/master/pass/Science_Cats-84873657.jpg" />
+            </div>
+            <div class="vid-desc">
+                <h2 id="vid-title">Baum²</h2>
+                <p id="vid-date">24.02.2020</p>
+                <p id="vid-description">Fusce finibus congue dignissim. Maecenas tincidunt magna varius nunc vestibulum pulvinar. Duis cursus a ante scelerisque condimentum. Sed eu nunc risus. Proin quis venenatis orci. Suspendisse vehicula luctus nulla. Integer enim sapien, bibendum volutpat ante ut, varius ullamcorper diam. Vivamus congue porttitor lacus, a convallis dui pulvinar at. Proin posuere nisl metus, at facilisis nulla lacinia nec.
+                    Vestibulum tortor libero, elementum sit amet mollis quis, pulvinar sit amet nunc. Pellentesque aliquam ultrices purus sit amet convallis. Proin non sapien id eros vestibulum tempor sit amet a ligula. In porttitor dui at leo bibendum varius. Integer gravida dui vitae arcu egestas, vel aliquet nulla accumsan. Curabitur metus massa, facilisis non semper ut, efficitur in elit. Mauris sodales vestibulum justo in ullamcorper. In quam nunc, laoreet et purus sit amet, elementum lobortis risus. Sed finibus elit vel nulla faucibus, eu aliquet odio lacinia. Duis posuere lectus ipsum, vel auctor enim molestie a. Sed euismod urna sit amet orci faucibus lobortis. Sed facilisis, diam quis porta lobortis, enim libero blandit orci, ullamcorper condimentum dui nulla ac libero. Nam a porta felis, nec dictum velit. Donec nec neque vehicula, imperdiet augue vitae, egestas urna.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="./scripts/index.js"></script>
+</body>
+</html>

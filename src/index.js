@@ -17,7 +17,7 @@ function createWindow() {
   });
   win.setMenuBarVisibility(false);
   // win.openDevTools();
-  win.loadFile('index.html');
+  win.loadFile(path.resolve(__dirname, 'public', 'index.html'));
 }
 
 ipcMain.on('download', (event, url) => {
@@ -31,7 +31,6 @@ ipcMain.on('download', (event, url) => {
 
   vid.on('data', chunk => {
     downloaded += chunk.length;
-    console.log(downloaded, total, downloaded/total);
     event.reply('downloading', (downloaded /total * 100).toFixed(2));
   });
 

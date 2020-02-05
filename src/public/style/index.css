@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Parisienne|Ubuntu|Ubuntu+Mono&display=swap");
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #242021;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+}
+html nav,
+body nav {
+  width: 100%;
+  justify-content: right;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  text-align: right;
+  -webkit-app-region: drag;
+  background-color: #110f10;
+}
+html nav i,
+body nav i {
+  font-size: 1.3em;
+  transition: 0.2s ease;
+  -webkit-app-region: no-drag;
+}
+html nav i:hover,
+body nav i:hover {
+  cursor: pointer;
+  color: #FF3064;
+}
+html header,
+body header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+html header h1,
+body header h1 {
+  font-family: "Parisienne", serif;
+  font-size: 4em;
+  margin: 0;
+  color: #FF3064;
+}
+html main,
+body main {
+  flex-grow: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+}
+html main .in-container,
+body main .in-container {
+  display: flex;
+  justify-content: stretch;
+  position: relative;
+}
+html main .in-container #hide-in,
+body main .in-container #hide-in {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  display: none;
+}
+html main .in-container #hide-in::-webkit-progress-bar,
+body main .in-container #hide-in::-webkit-progress-bar {
+  background-color: #444;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+html main .in-container #hide-in::-webkit-progress-value,
+body main .in-container #hide-in::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)), -webkit-linear-gradient(left, #30FFF4, #FF3064);
+  border-radius: 2px;
+  background-size: 100% 100%, 100% 100%, 100% 100%;
+}
+html main .in-container label[for=hide-in],
+body main .in-container label[for=hide-in] {
+  color: #fff;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7em;
+  mix-blend-mode: overlay;
+  display: none;
+}
+html main .in-container #url-in,
+body main .in-container #url-in {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 10px;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 3px;
+  background-color: #312c2d;
+  color: #ccc;
+  transition: 0.2s ease;
+  margin-right: 7.5px;
+}
+html main .in-container #url-in:focus,
+body main .in-container #url-in:focus {
+  outline: none;
+  color: #fff;
+}
+html main .in-container #lets-go,
+body main .in-container #lets-go {
+  border: none;
+  border-radius: 3px;
+  background-color: #FF3064;
+  color: #fff;
+  transition: 0.2s ease;
+  font-family: "Ubuntu";
+}
+html main .in-container #lets-go:disabled,
+body main .in-container #lets-go:disabled {
+  background-color: #312c2d;
+  color: #666;
+}
+html main .in-container #lets-go:not(:disabled):hover,
+body main .in-container #lets-go:not(:disabled):hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+html main .in-container #lets-go:not(:disabled):focus,
+body main .in-container #lets-go:not(:disabled):focus {
+  outline: none;
+}
+html main #vid-container,
+body main #vid-container {
+  flex-grow: 1;
+  margin-top: 15px;
+  background-color: #312c2d;
+  border-radius: 3px;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  padding: 10px;
+  max-height: 325px;
+}
+html main #vid-container .vid-thumb-container,
+body main #vid-container .vid-thumb-container {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+html main #vid-container .vid-thumb-container #vid-thumb,
+body main #vid-container .vid-thumb-container #vid-thumb {
+  width: 100%;
+  height: auto;
+  margin-right: 15px;
+  border-radius: 3px;
+}
+html main #vid-container .vid-desc,
+body main #vid-container .vid-desc {
+  border-left: 2px solid #333;
+  padding-left: 15px;
+  margin-left: 15px;
+  width: 50%;
+  height: 100%;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+html main #vid-container .vid-desc #vid-title,
+body main #vid-container .vid-desc #vid-title {
+  font-weight: normal;
+  font-family: "Ubuntu Mono", monospace;
+  margin: 0;
+}
+html main #vid-container .vid-desc #vid-date,
+body main #vid-container .vid-desc #vid-date {
+  font-size: 0.8em;
+  color: #aaa;
+}
+html main #vid-container .vid-desc #vid-description,
+body main #vid-container .vid-desc #vid-description {
+  font-size: 1em;
+  color: #ccc;
+}
